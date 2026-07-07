@@ -11,7 +11,11 @@
     --gold-bright: #e8c874;
     --bg: #0a0a08;
   }
-  *{ box-sizing: border-box; -webkit-tap-highlight-color: rgba(201,162,74,0.25); }
+  *{
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;   /* quita el flash azul/dorado al tocar en móvil */
+    -webkit-touch-callout: none;                /* evita el menú de "guardar imagen" al mantener presionado */
+  }
   html,body{
     margin:0; padding:0; background:var(--bg);
     font-family: 'Avenir Next', 'Segoe UI', system-ui, sans-serif;
@@ -21,32 +25,25 @@
     max-width: 640px;      /* mirrors the original artboard proportions */
     margin: 0 auto;
     line-height: 0;        /* removes stray gaps under the image */
+    -webkit-user-select: none;
+    user-select: none;                          /* evita que el texto/imagen se "seleccione" */
   }
   .page img{
     display:block;
     width:100%;
     height:auto;
+    pointer-events: none;                       /* los clics pasan directo a los hotspots */
+    -webkit-user-drag: none;
   }
   /* Invisible, tappable link zones positioned as percentages of the image,
      so they stay perfectly aligned whether the page renders at phone
-     width or full desktop width. */
+     width or full desktop width. Completely invisible, no hover/active/focus fill. */
   .hotspot{
     position:absolute;
     display:block;
     outline: none;
-    border-radius: 14px;
-  }
-  .hotspot:focus-visible{
-    box-shadow: 0 0 0 3px var(--gold-bright);
-  }
-  /* Optional gentle feedback on tap/hover — remove if you want it fully invisible */
-  .hotspot:active{
-    background: rgba(201,162,74,0.10);
-  }
-  @media (hover:hover){
-    .hotspot:hover{
-      background: rgba(201,162,74,0.08);
-    }
+    -webkit-tap-highlight-color: transparent;
+    background: transparent;
   }
 
   /* Panel-level zones (whole promo card is tappable — best target size on mobile) */
