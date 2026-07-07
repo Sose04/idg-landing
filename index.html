@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>IDG Luxe — Time to Indulge</title>
+<meta name="description" content="Elegance with a touch of desire. Descubre IDG Luxe.">
+<style>
+  :root{
+    --gold: #c9a24a;
+    --gold-bright: #e8c874;
+    --bg: #0a0a08;
+  }
+  *{ box-sizing: border-box; -webkit-tap-highlight-color: rgba(201,162,74,0.25); }
+  html,body{
+    margin:0; padding:0; background:var(--bg);
+    font-family: 'Avenir Next', 'Segoe UI', system-ui, sans-serif;
+  }
+  .page{
+    position: relative;
+    max-width: 640px;      /* mirrors the original artboard proportions */
+    margin: 0 auto;
+    line-height: 0;        /* removes stray gaps under the image */
+  }
+  .page img{
+    display:block;
+    width:100%;
+    height:auto;
+  }
+  /* Invisible, tappable link zones positioned as percentages of the image,
+     so they stay perfectly aligned whether the page renders at phone
+     width or full desktop width. */
+  .hotspot{
+    position:absolute;
+    display:block;
+    outline: none;
+    border-radius: 14px;
+  }
+  .hotspot:focus-visible{
+    box-shadow: 0 0 0 3px var(--gold-bright);
+  }
+  /* Optional gentle feedback on tap/hover — remove if you want it fully invisible */
+  .hotspot:active{
+    background: rgba(201,162,74,0.10);
+  }
+  @media (hover:hover){
+    .hotspot:hover{
+      background: rgba(201,162,74,0.08);
+    }
+  }
+
+  /* Panel-level zones (whole promo card is tappable — best target size on mobile) */
+  .zone-store        { top: 25.4%; left: 12.0%; width: 88.0%; height: 12.1%; }
+  .zone-kit          { top: 41.0%; left: 0%;    width: 100%;  height: 13.0%; }
+  .zone-ritual       { top: 56.6%; left: 12.0%; width: 88.0%; height: 12.4%; }
+  .zone-club         { top: 71.1%; left: 0%;    width: 100%;  height: 14.3%; }
+
+  /* Footer text link + logo url */
+  .zone-clickhere     { top: 88.5%; left: 68.5%; width: 17.5%; height: 2.2%; }
+  .zone-siteurl        { top: 91.7%; left: 34.5%; width: 30.0%; height: 2.2%; }
+
+  /* Social icon row (measured directly from the rendered artwork) */
+  .zone-fb   { top: 94.5%; left: 18.3%; width: 6.0%; height: 4.0%; }
+  .zone-ig   { top: 94.5%; left: 27.6%; width: 6.0%; height: 4.0%; }
+  .zone-tt   { top: 94.5%; left: 37.0%; width: 6.0%; height: 4.0%; }
+  .zone-x    { top: 94.5%; left: 46.3%; width: 6.0%; height: 4.0%; }
+  .zone-snap { top: 94.5%; left: 55.7%; width: 6.0%; height: 4.0%; }
+  .zone-yt   { top: 94.5%; left: 65.0%; width: 6.0%; height: 4.0%; }
+  .zone-li   { top: 94.5%; left: 74.4%; width: 6.0%; height: 4.0%; }
+</style>
+</head>
+<body>
+
+<div class="page">
+  <img src="idg-hero.jpg" alt="IDG Luxe — Time to Indulge. Elegance with a touch of desire." usemap="#idgmap">
+
+  <a class="hotspot zone-store"  href="https://idgluxe.com/" aria-label="Our Store — visita la tienda"></a>
+  <a class="hotspot zone-kit"    href="https://idgluxe.com/products/idg-kit-box" aria-label="The Signature Kit — ver el kit"></a>
+  <a class="hotspot zone-ritual" href="https://idgluxe.com/pages/about" aria-label="The Ritual — conoce más"></a>
+  <a class="hotspot zone-club"   href="https://idgluxe.com/pages/contact-us" aria-label="Únete a Kittens Club"></a>
+
+  <a class="hotspot zone-clickhere" href="https://idgluxe.com/" aria-label="Click here"></a>
+  <a class="hotspot zone-siteurl"   href="https://idgluxe.com/" aria-label="www.idgluxe.com"></a>
+
+  <a class="hotspot zone-fb"   href="https://www.facebook.com/idgluxe" aria-label="Facebook" target="_blank" rel="noopener"></a>
+  <a class="hotspot zone-ig"   href="https://www.instagram.com/idgluxe/" aria-label="Instagram" target="_blank" rel="noopener"></a>
+  <a class="hotspot zone-tt"   href="https://www.tiktok.com/@idgluxe" aria-label="TikTok" target="_blank" rel="noopener"></a>
+  <a class="hotspot zone-x"    href="https://x.com/IDGLuxe" aria-label="X (Twitter)" target="_blank" rel="noopener"></a>
+  <a class="hotspot zone-snap" href="https://www.snapchat.com/@idgluxe?share_id=GHNsuzG1QaKDrIOGJU-k4Q&locale=es_CO" aria-label="Snapchat" target="_blank" rel="noopener"></a>
+  <a class="hotspot zone-yt"   href="https://www.youtube.com/@IDGLuxe" aria-label="YouTube" target="_blank" rel="noopener"></a>
+  <a class="hotspot zone-li"   href="https://www.linkedin.com/company/idg-luxe/posts/?feedView=all" aria-label="LinkedIn" target="_blank" rel="noopener"></a>
+</div>
+
+</body>
+</html>
